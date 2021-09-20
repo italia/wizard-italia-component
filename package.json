@@ -6,6 +6,7 @@
     "demo": "vue-cli-service serve",
     "build-lib": "rm -rf ./dist && vue-cli-service build --target lib --name wizard-italia src/entry.js",
     "build-wc": "rm -rf ./dist && vue-cli-service build --target lib --name wizard-italia src/wc.js",
+    "build-all": "yarn build-wc && mv dist wc && yarn build-lib && mv wc ./dist",
     "lint": "vue-cli-service lint",
     "prepare-wc-demo": "cp -R ./dist ./demo"
   },
@@ -13,11 +14,14 @@
     "marked": "^3.0.3"
   },
   "peerDependencies": {
-    "@oruga-ui/oruga": "^0.3.6",
+    "@oruga-ui/oruga": "^0.4.4",
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "@oruga-ui/oruga": "^0.4.4",
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11",
     "@fontsource/titillium-web": "^4.3.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",

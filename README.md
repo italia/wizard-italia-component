@@ -2,7 +2,7 @@
 
 # wizard-italia
 
-Guided wizard to direct contributors
+Component to create your guided wizard.
 
 ## Project setup
 
@@ -10,16 +10,16 @@ Guided wizard to direct contributors
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Compiles and hot-reloads demo for development
 
 ```shell
 yarn serve
 ```
 
-### Compiles and minifies for production
+### Compiles and minifies for production (lib and web component)
 
 ```shell
-yarn build
+yarn build-all
 ```
 
 ### Lints and fixes files
