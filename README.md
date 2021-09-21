@@ -1,36 +1,20 @@
 <!-- markdownlint-disable no-inline-html -->
 
-# wizard-italia
+# vue-wizard-italia
 
-Component to create your guided wizard.
+Opinionated component to create your guided wizard.
 
-## Project setup
+## Installation
 
-```shell
-yarn install
+```
+yarn add vue-wizard-italia
 ```
 
-### Compiles and hot-reloads demo for development
+or
 
-```shell
-yarn serve
 ```
-
-### Compiles and minifies for production (lib and web component)
-
-```shell
-yarn build-all
+npm install vue-wizard-italia
 ```
-
-### Lints and fixes files
-
-```shell
-yarn lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Use it as a Web Component
 
@@ -63,6 +47,36 @@ Customization engine lays on Oruga, [check the documentation](https://oruga.io/d
 </script>
 ```
 
+## Development
+
+Install dependencies using
+
+```shell
+yarn install
+```
+
+### Compiles and hot-reloads demo for development
+
+```shell
+yarn serve
+```
+
+### Lints and fixes files
+
+```shell
+yarn lint
+```
+
+### Customize configuration
+
+See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Compiles and minifies for production (lib and web component)
+
+```shell
+yarn build-all
+```
+
 ### Build web component
 
 ```
@@ -89,7 +103,7 @@ Every contribution is welcome!
 
 Here is a list of users who contributed to this repository:
 
-<a href="https://github.com/italia/wizard-italia/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=italia/wizard-italia" />
+<a href="https://github.com/italia/wizard-component/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=italia/wizard-component" />
 </a>
 

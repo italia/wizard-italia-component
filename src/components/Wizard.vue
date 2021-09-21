@@ -63,8 +63,10 @@
               <h1 class="h3">
                 {{ currentChoice.label }}
               </h1>
-              <div class="reply my-4 p-5" v-html="transformMarkdown(currentChoice.content)">
-              </div>
+              <div
+                class="reply my-4 p-5"
+                v-html="transformMarkdown(currentChoice.content)"
+              />
             </div>
 
             <o-button
@@ -78,7 +80,7 @@
                 v-bind="styledConfig.icon"
                 class="icon icon-white"
                 icon="arrow-left-circle"
-              /> {{labelBack}}
+              /> {{ labelBack }}
             </o-button>
             <o-button
               v-if="isLeaf(currentChoice)"
@@ -91,7 +93,7 @@
                 v-bind="styledConfig.icon"
                 class="icon icon-white"
                 icon="restore"
-              /> {{labelRestart}}
+              /> {{ labelRestart }}
             </o-button>
           </div>
         </div>
@@ -138,7 +140,7 @@ export default {
     return {
       activeStep: 0,
       choices: [],
-      completed: false
+      completed: false,
     };
   },
   computed: {
