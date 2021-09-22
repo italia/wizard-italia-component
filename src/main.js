@@ -20,6 +20,9 @@ Vue.use(Config, {
     // Apply variant when the element is not outlined
     variantClass: (variant, context) => (!context.props.outlined ? `btn-${variant}` : ''),
   },
+  icon: {
+    rootClass: 'icon icon-white'
+  }
 });
 
 new Vue({

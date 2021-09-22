@@ -18,6 +18,9 @@
             href="#"
             @click="moveToStep(index)"
           >{{ truncate(madeChoice.question, 60) }}</a>
+          <span
+            class="breadcrumb-items-divider"
+          >{{breadcrumbItemsDivider}}</span>
         </li>
       </ol>
     </nav>
@@ -28,75 +31,69 @@
     >
       <p
         v-if="currentChoice.comment"
-        class="h4 pb-4"
+        class="comment"
       >
         {{ currentChoice.comment }}
       </p>
 
-      <h1 class="h3">
+      <h2 class="question">
         {{ currentChoice.question }}
-      </h1>
+      </h2>
 
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-xl-6 col-lg-8 col-md-10">
-            <ul
-              v-if="!isLeaf(currentChoice)"
-              class="choices"
-              :aria-label="labelAria"
-            >
-              <li
-                v-for="(possibleChoice, index) in currentChoice.content"
-                :key="possibleChoice.label"
-              >
-                <o-button
-                  v-bind="styleConfig.button"
-                  class="choice"
-                  variant="outline-primary"
-                  @click="selectChoice(possibleChoice, index)"
-                >
-                  {{ possibleChoice.label }}
-                </o-button>
-              </li>
-            </ul>
-            <div v-else>
-              <h1 class="h3">
-                {{ currentChoice.label }}
-              </h1>
-              <div
-                class="reply my-4 p-5"
-                v-html="transformMarkdown(currentChoice.content)"
-              />
-            </div>
-
+      <div class="choices-wrapper">
+        <ul
+          v-if="!isLeaf(currentChoice)"
+          class="choices-list"
+          :aria-label="labelAria"
+        >
+          <li
+            v-for="(possibleChoice, index) in currentChoice.content"
+            :key="possibleChoice.label"
+          >
             <o-button
-              v-if="activeStep > 0"
-              v-bind="styledConfig.button"
+              v-bind="styleConfig.button"
               class="choice"
-              variant="secondary"
-              @click="goBack()"
+              variant="outline-primary"
+              @click="selectChoice(possibleChoice, index)"
             >
-              <o-icon
-                v-bind="styledConfig.icon"
-                class="icon icon-white"
-                icon="arrow-left-circle"
-              /> {{ labelBack }}
+              {{ possibleChoice.label }}
             </o-button>
-            <o-button
-              v-if="isLeaf(currentChoice)"
-              v-bind="styledConfig.button"
-              class="choice"
-              variant="primary"
-              @click="restart()"
-            >
-              <o-icon
-                v-bind="styledConfig.icon"
-                class="icon icon-white"
-                icon="restore"
-              /> {{ labelRestart }}
-            </o-button>
-          </div>
+          </li>
+        </ul>
+        <div v-else>
+          <h2 class="choice--current">
+            {{ currentChoice.label }}
+          </h2>
+          <div
+            class="reply"
+            v-html="transformMarkdown(currentChoice.content)"
+          />
         </div>
+
+        <o-button
+          v-if="activeStep > 0"
+          v-bind="styledConfig.button"
+          class="choice"
+          variant="secondary"
+          @click="goBack()"
+        >
+          <o-icon
+            v-bind="styledConfig.icon"
+            icon="arrow-left-circle"
+          /> {{ labelBack }}
+        </o-button>
+        <o-button
+          v-if="isLeaf(currentChoice)"
+          v-bind="styledConfig.button"
+          class="choice"
+          variant="primary"
+          @click="restart()"
+        >
+          <o-icon
+            v-bind="styledConfig.icon"
+            icon="restore"
+          /> {{ labelRestart }}
+        </o-button>
       </div>
     </div>
   </div>
@@ -109,6 +106,10 @@ import { initMatomo, logAction } from '@/analytics';
 export default {
   name: 'Wizard',
   props: {
+    breadcrumbItemsDivider: {
+      type: String,
+      default: '/',
+    },
     labelRestart: {
       type: String,
       default: 'Ricomincia',
@@ -248,13 +249,12 @@ export default {
 </script>
 
 <style scoped>
-.breadcrumb-item:after {
-  content: '/';
+.breadcrumb-items-divider {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   font-weight: 600;
 }
-ul.choices {
+.choices-list {
   margin-top: 2rem;
   list-style-type: none;
   padding-left: 0;
@@ -268,8 +268,12 @@ ul.choices {
   background-color: #dce9f5;
   text-align: left;
 }
-.choice.btn-outline-primary:hover {
-  background-color: #dce9f5;
-  color: #06c;
+
+.comment {
+
+}
+
+.question {
+
 }
 </style>
