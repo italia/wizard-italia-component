@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import Wizard from './components/Wizard.vue';
+import Wizard from '@/components/Wizard.vue';
 
 export default {
   name: 'App',

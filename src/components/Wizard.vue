@@ -20,7 +20,7 @@
           >{{ truncate(madeChoice.question, 60) }}</a>
           <span
             class="breadcrumb-items-divider"
-          >{{breadcrumbItemsDivider}}</span>
+          >{{ breadcrumbItemsDivider }}</span>
         </li>
       </ol>
     </nav>
