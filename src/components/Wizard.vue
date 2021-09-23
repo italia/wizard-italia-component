@@ -52,7 +52,6 @@
           >
             <o-button
               v-bind="styleConfig.button"
-              class="choice"
               variant="outline-primary"
               @click="selectChoice(possibleChoice, index)"
             >
@@ -73,7 +72,6 @@
         <o-button
           v-if="activeStep > 0"
           v-bind="styledConfig.button"
-          class="choice"
           variant="secondary"
           @click="goBack()"
         >
@@ -85,7 +83,6 @@
         <o-button
           v-if="isLeaf(currentChoice)"
           v-bind="styledConfig.button"
-          class="choice"
           variant="primary"
           @click="restart()"
         >
@@ -259,21 +256,8 @@ export default {
   list-style-type: none;
   padding-left: 0;
 }
-.choice {
-  width: 100%;
-  text-align: left;
-  margin-bottom: 8px;
-}
 .reply {
   background-color: #dce9f5;
   text-align: left;
-}
-
-.comment {
-
-}
-
-.question {
-
 }
 </style>

@@ -16,10 +16,12 @@
           </div>
         </div>
       </div>
-      <Wizard
-        matomo-site-id="wBEpDzz0yL"
-        @choice="setTitle"
-      />
+      <div class="row justify-content-center">
+        <Wizard
+          matomo-site-id="wBEpDzz0yL"
+          @choice="setTitle"
+        />
+      </div>
     </main>
   </div>
 </template>
@@ -47,7 +49,9 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+@import 'bootstrap-italia/src/scss/bootstrap-italia';
+
 #app {
   display:flex;
   flex-direction:column;
@@ -58,16 +62,32 @@ main {
   text-align: center;
   color: #2c3e50;
 }
-footer {
-  margin-top:auto;
+
+.wizard {
+  @extend .col-12;
+  @extend .col-xl-6;
+  @extend .col-lg-8;
+  @extend .col-md-10;
 }
-article.reply > h2 {
-  font-size: 1.555rem;
+
+.reply {
+  @extend .my-4;
+  @extend .p-5;
 }
-article.reply > h3 {
-  font-size: 1.333rem;
+
+.wizard-btn {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 8px;
 }
-.icon {
-  overflow: hidden;
+
+.choice--current, .question {
+  @extend .h3;
 }
+
+.btn-outline-primary:hover {
+  background-color: #dce9f5;
+  color: #06c;
+}
+
 </style>
