@@ -110,15 +110,15 @@ export default {
     },
     labelRestart: {
       type: String,
-      default: 'Ricomincia',
+      default: 'Restart',
     },
     labelBack: {
       type: String,
-      default: 'Indietro',
+      default: 'Back',
     },
     labelAria: {
       type: String,
-      default: 'Scegli una delle opzioni seguenti:',
+      default: 'Choose one of the following options:',
     },
     matomoSiteId: {
       type: String,
@@ -126,7 +126,7 @@ export default {
     },
     configurationUrl: {
       type: String,
-      default: 'https://raw.githubusercontent.com/italia/wizard-italia/main/src/configuration/tree.json',
+      required: true
     },
     styleConfig: {
       type: Object,
