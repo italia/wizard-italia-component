@@ -7,13 +7,13 @@ Opinionated component to create your guided wizard.
 ## Installation
 
 ```
-yarn add vue-wizard-italia
+yarn add wizard-italia-component
 ```
 
 or
 
 ```
-npm install vue-wizard-italia
+npm install wizard-italia-component
 ```
 
 ## Use it as a Web Component

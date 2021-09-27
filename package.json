@@ -1,11 +1,11 @@
 {
-  "name": "wizard-italia",
-  "version": "0.0.0",
+  "name": "wizard-italia-component",
+  "version": "0.0.1",
   "private": false,
   "scripts": {
     "demo": "vue-cli-service serve",
-    "build-lib": "rm -rf ./dist && vue-cli-service build --target lib --name wizard-italia src/entry.js",
-    "build-wc": "rm -rf ./dist && vue-cli-service build --target lib --name wizard-italia src/wc.js",
+    "build-lib": "rm -rf ./dist && vue-cli-service build --target lib --name wizard-italia-component src/entry.js",
+    "build-wc": "rm -rf ./dist && vue-cli-service build --target lib --name wizard-italia-component src/wc.js",
     "build-all": "yarn build-wc && mv dist wc && yarn build-lib && mv wc ./dist",
     "lint": "vue-cli-service lint",
     "prepare-wc-demo": "cp -R ./dist ./demo"
