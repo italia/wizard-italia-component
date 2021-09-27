@@ -45,7 +45,7 @@
         <ul
           v-if="!isLeaf(currentChoice)"
           class="choices-list"
-          :aria-label="labelAria"
+          :aria-label="labelAriaChoices"
         >
           <li
             v-for="(possibleChoice, index) in currentChoice.content"
@@ -116,7 +116,7 @@ export default {
       type: String,
       default: 'Back',
     },
-    labelAria: {
+    labelAriaChoices: {
       type: String,
       default: 'Choose one of the following options:',
     },

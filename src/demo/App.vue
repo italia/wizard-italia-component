@@ -18,7 +18,11 @@
       </div>
       <div class="row justify-content-center">
         <Wizard
+          configuration-url="https://raw.githubusercontent.com/italia/wizard-italia/main/src/configuration/tree.json"
           matomo-site-id="wBEpDzz0yL"
+          label-back="Indietro"
+          label-restart="Ricomincia"
+          label-aria-choices="Scegli una delle opzioni seguenti:"
           @choice="setTitle"
         />
       </div>
