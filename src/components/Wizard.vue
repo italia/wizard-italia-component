@@ -126,7 +126,7 @@ export default {
     },
     configurationUrl: {
       type: String,
-      required: true
+      required: true,
     },
     styleConfig: {
       type: Object,
