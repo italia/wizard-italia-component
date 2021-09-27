@@ -65,6 +65,15 @@ main {
 
 .wizard {
   @extend .col-12;
+}
+
+.breadcrumb-container {
+  @extend .col-12;
+}
+
+.page-content {
+  @extend .mx-auto;
+  @extend .col-12;
   @extend .col-xl-6;
   @extend .col-lg-8;
   @extend .col-md-10;
@@ -88,6 +97,11 @@ main {
 .btn-outline-primary:hover {
   background-color: #dce9f5;
   color: #06c;
+}
+
+.reply {
+  background-color: #dce9f5;
+  text-align: left;
 }
 
 </style>

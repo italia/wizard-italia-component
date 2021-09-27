@@ -27,6 +27,7 @@
 
     <div
       ref="page-content"
+      class="page-content"
       tabindex="-1"
     >
       <p
@@ -255,9 +256,5 @@ export default {
   margin-top: 2rem;
   list-style-type: none;
   padding-left: 0;
-}
-.reply {
-  background-color: #dce9f5;
-  text-align: left;
 }
 </style>
