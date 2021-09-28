@@ -1,6 +1,6 @@
 <!-- markdownlint-disable no-inline-html -->
 
-# vue-wizard-italia
+# Wizard Italia component
 
 Opinionated component to create your guided wizard.
 
