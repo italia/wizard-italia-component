@@ -103,7 +103,7 @@ Every contribution is welcome!
 
 Here is a list of users who contributed to this repository:
 
-<a href="https://github.com/italia/wizard-component/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=italia/wizard-component" />
+<a href="https://github.com/italia/wizard-italia-component/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=italia/wizard-italia-component" />
 </a>
 
