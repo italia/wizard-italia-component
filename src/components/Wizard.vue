@@ -99,6 +99,7 @@
 
 <script>
 import marked from 'marked';
+import yaml from 'js-yaml';
 import { initMatomo, logAction } from '@/analytics';
 
 export default {
@@ -165,7 +166,8 @@ export default {
       initMatomo(this.matomoSiteId);
     }
     fetch(this.configurationUrl)
-      .then((response) => response.json())
+      .then((response) => response.text())
+      .then((text) => yaml.load(text, { json: true }))
       .then((data) => {
         this.choices.push(data.root);
         window.history.pushState({ choices: this.choices, activeStep: this.activeStep }, '');
